@@ -1,9 +1,0 @@
-
-$ mkdir /path/to/source-code
-$ cd /path/to/source-code
-
-
-$ git clone https://github.com/username/username.github.io.git
-$ cd username.github.io
-
-https://github.com/Alkaline-21/Alkaline-21.github.io.git
