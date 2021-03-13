@@ -6,3 +6,17 @@
 }
 */
 
+.fancy-titles {
+  font-family: 'Uncial Antiqua', cursive;
+  text-align: center;
+}
+
+#parchment-title {
+  font-size: 50 px;
+  text-align: center;
+}
+
+#landforms-title {
+  font-size: 25 px;
+  text-align: right;
+}
