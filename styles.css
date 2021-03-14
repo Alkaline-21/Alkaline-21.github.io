@@ -15,6 +15,11 @@ img {
   max-width:100%;
   height:auto;
 }
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 */
 
 .fancy-titles {
@@ -38,4 +43,5 @@ img {
 }
 html { 
   background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed; 
+  background-size: cover;
 }
