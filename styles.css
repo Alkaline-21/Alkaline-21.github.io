@@ -4,6 +4,17 @@
   margin-right: auto;
   width: 50%;
 }
+
+img {
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+  max-width:100%;
+  height:auto;
+}
 */
 
 .fancy-titles {
@@ -14,9 +25,14 @@
 #parchment-title {
   font-size: 50 px;
   text-align: center;
+  color: #4b6794;
 }
 
 #landforms-title {
   font-size: 25 px;
   text-align: right;
+  color: white;
+}
+
+.fill {
 }
