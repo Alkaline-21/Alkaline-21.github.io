@@ -20,31 +20,22 @@ img {
 .fancy-titles {
   font-family: 'Uncial Antiqua', cursive;
   text-align: center;
+  color: #4b6794;
 }
 
 #parchment-title {
   font-size: 50 px;
   text-align: center;
-  color: #4b6794;
 }
 
 #landforms-title {
   font-size: 25 px;
   text-align: right;
-  color: #FFFFFF;
 }
 
 .subtitles {
   color: #FFFFFF;
 }
-
-.fill {
-}
-
 html { 
-  background: url("Visuals/Ocean2.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed; 
 }
