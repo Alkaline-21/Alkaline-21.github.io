@@ -31,7 +31,11 @@ img {
 #landforms-title {
   font-size: 25 px;
   text-align: right;
-  color: white;
+  color: #FFFFFF;
+}
+
+.subtitles {
+  color: #FFFFFF;
 }
 
 .fill {
