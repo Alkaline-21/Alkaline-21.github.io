@@ -3,11 +3,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.lang.Math;
 
-public class scripts {
+public class scripts implements MouseListener {
   
   public static void initializer() {
   
-    boolean isClicked = false; 
+    //INPUT MOUNTAINS
+    
+    boolean mtnClick = false; 
     ArrayLyst<Image> mountains = new ArrayList<Image>();
 
     URL mtna = Paths.get("Visuals","Mountains1").toUri().toURL();
@@ -35,11 +37,30 @@ public class scripts {
   public static void randomizer(String category) {
   //use random function to select a random-image, assoc boolean
 
+    if(mountains.size() == 0) {
+      initializer();
+    }
   //if click=true and boolean==true, set boolean=false and put image on screen
-    isClicked = true; 
-    
-    
+    else if(category.equals("mountain")） {
+       mtnClick = true; 
+    }
 
   }
+     @Override
+     public void mouseClicked(MouseEvent arg0) { 
+       if(mtnClick && isInsideRectangle!!
+     }
+
+     @Override
+     public void mouseEntered(MouseEvent arg0) { }
+
+     @Override
+     public void mouseExited(MouseEvent arg0) { }
+
+     @Override
+     public void mousePressed(MouseEvent arg0) { }
+
+     @Override
+     public void mouseReleased(MouseEvent arg0) { }
 
 }
