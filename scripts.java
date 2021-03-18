@@ -45,14 +45,21 @@ public class scripts implements MouseListener {
     else if(category.equals("mountain")） {
        mtnClick = true; 
     }
+            
+    else if(category.equals("arrow")) {
+      mtnClick = false;
+    }
 
   }
      @Override
      public void mouseClicked(MouseEvent arg0) { 
        if(mtnClick) {
-         BufferedImage mtn = new BufferedImage(mtn1.getWidth(), mtn1.getHeight(), #00FFFFFF);
-         
-         draw(Graphics brush, mtn1);
+          PointerInfo a = MouseInfo.getPointerInfo();
+          Point b = a.getLocation();
+          int x = (int) b.getX();
+          int y = (int) b.getY();
+          
+          drawImage(mtn1, x, y, null);
        }
      }
 
