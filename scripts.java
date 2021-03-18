@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.lang.Math;
+import java.awt.Graphics;
 
 public class scripts implements MouseListener {
   
@@ -34,7 +35,7 @@ public class scripts implements MouseListener {
     mountains.add(mtn4);
   }
   
-  public static void randomizer(String category) {
+  private static void randomizer(String category) {
   //use random function to select a random-image, assoc boolean
 
     if(mountains.size() == 0) {
@@ -48,7 +49,10 @@ public class scripts implements MouseListener {
   }
      @Override
      public void mouseClicked(MouseEvent arg0) { 
-       if(mtnClick && isInsideRectangle!!
+       if(mtnClick) {
+         BufferedImage mtn = new BufferedImage(mtn1.getWidth(), mtn1.getHeight(), 
+         draw(Graphics brush, mtn1);
+       }
      }
 
      @Override
@@ -62,5 +66,9 @@ public class scripts implements MouseListener {
 
      @Override
      public void mouseReleased(MouseEvent arg0) { }
+            
+     private void draw(Graphics brush, Image mtn1) {
+       brush.drawImage(
+     }
 
 }
