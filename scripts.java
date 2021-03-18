@@ -50,7 +50,8 @@ public class scripts implements MouseListener {
      @Override
      public void mouseClicked(MouseEvent arg0) { 
        if(mtnClick) {
-         BufferedImage mtn = new BufferedImage(mtn1.getWidth(), mtn1.getHeight(), 
+         BufferedImage mtn = new BufferedImage(mtn1.getWidth(), mtn1.getHeight(), #00FFFFFF);
+         
          draw(Graphics brush, mtn1);
        }
      }
