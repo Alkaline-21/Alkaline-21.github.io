@@ -53,18 +53,11 @@
     
     <div class="selections-box">
       
-      <input class="square" type="button" onclick="executeApplet();" value="mtn"/>
-      <input class="square" type="button" style="padding-top: 100px" onclick="executeApplet();" value="arrow"/>
+      <input class="square" type="button" onclick="executor();" value="mtn"/>
+      <input class="square" type="button" style="padding-top: 100px" onclick="executor();" value="arrow"/>
       
     </div>
     
-    <script language="javascript">
-    function executeApplet(){
-        alert("Load Applet");
-        document.write("<applet code='code' height='300' width='300'></applet>");
-    }
-      
-    </script>
-    
+    <script src="scripts/main.js"></script>
   </body>
 </html> 
