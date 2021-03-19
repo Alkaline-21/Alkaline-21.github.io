@@ -31,6 +31,17 @@
   </head>
   <body>
     
+    <script src="http://www.java.com/js/deployJava.js"></script>
+    <script>
+        var attributes = {
+        id: 'applet',
+        code:'code.class',
+        width:700, height:500};
+        var parameters = {}; 
+        var version = '1.6' ; 
+        deployJava.runApplet(attributes, parameters, version);
+    </script>
+    
     <h1 class="fancy-titles" id="parchment-title">Map Creator</h1>
       <!-- <img src="Visuals/Parchment Sign.png" alt="Parchment Sign" class = "centered"> -->
     
@@ -42,10 +53,18 @@
     
     <div class="selections-box">
       
-      <input class="square" type="button" onclick="randomizer("mountain")" value="mtn"/>
-      <input class="square" type="button" style="padding-top: 50px" onclick="randomizer("arrow")" value="arrow"/>
+      <input class="square" type="button" onclick="executeApplet();" value="mtn"/>
+      <input class="square" type="button" style="padding-top: 100px" onclick="executeApplet();" value="arrow"/>
       
     </div>
+    
+    <script language="javascript">
+    function executeApplet(){
+        alert("Load Applet");
+        document.write("<applet code='code' height='300' width='300'></applet>");
+    }
+      
+    </script>
     
   </body>
 </html> 
