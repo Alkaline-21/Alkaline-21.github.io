@@ -30,7 +30,7 @@ public class mtnSelector extends Applet {
 		}
 	}
 		
-	private static void randomizer(String category) {
+	private static void selector(String category) {
 
 		if(category.equals("mountain")) {
 			mtnClick = true; 
