@@ -11,11 +11,11 @@ import java.awt.PointerInfo;
 import java.awt.MouseInfo;
 import java.applet.*;
 
-public class mtnSelector extends Applet {
-	static boolean mtnClick = false;
-	static ArrayList<Image> mountains = new ArrayList<Image>();
+public class code extends Applet {
+	boolean mtnClick = false;
+	ArrayList<Image> mountains = new ArrayList<Image>();
 
-	public mtnSelector() {
+	public code() {
 		try {
 			Image mtn1 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains1.jpg"));	  
 			Image mtn2 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains2.jpg"));	  
@@ -30,7 +30,7 @@ public class mtnSelector extends Applet {
 		}
 	}
 		
-	private static void selector(String category) {
+	public void selector(String category) {
 
 		if(category.equals("mountain")) {
 			mtnClick = true; 
