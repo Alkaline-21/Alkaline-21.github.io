@@ -9,9 +9,8 @@ import java.awt.image.BufferedImage;
 import java.awt.Point;
 import java.awt.PointerInfo;
 import java.awt.MouseInfo;
-import java.applet.*;
 
-public class code extends Applet {
+public class code {
 	boolean mtnClick = false;
 	ArrayList<Image> mountains = new ArrayList<Image>();
 
