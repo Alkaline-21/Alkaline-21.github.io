@@ -1,83 +1,64 @@
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.lang.Math;
-import java.awt.event;
-import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.event.MouseEvent;
+import java.awt.Image;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.awt.Point;
+import java.awt.PointerInfo;
+import java.awt.MouseInfo;
+import java.applet.*;
 
-public class scripts implements MouseListener {
-  
-  public static void initializer() {
-  
-    //INPUT MOUNTAINS
-    
-    boolean mtnClick = false; 
-    ArrayLyst<Image> mountains = new ArrayList<Image>();
+public class mtnSelector extends Applet {
+	static boolean mtnClick = false;
+	static ArrayList<Image> mountains = new ArrayList<Image>();
 
-    URL mtna = Paths.get("Visuals","Mountains1").toUri().toURL();
-    URL mtnb = Paths.get("Visuals","Mountains2").toUri().toURL();
-    URL mtnc = Paths.get("Visuals","Mountains3").toUri().toURL();
-    URL mtnd = Paths.get("Visuals","Mountains4").toUri().toURL();
+	public mtnSelector() {
+		try {
+			Image mtn1 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains1.jpg"));	  
+			Image mtn2 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains2.jpg"));	  
+			Image mtn3 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains3.jpg"));	  
+			Image mtn4 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains4.jpg"));	  
 
-    ImageIcon mounta = new ImageIcon(mtna);
-    Image mtn1 = mounta.getImage();
-    mountains.add(mtn1);
+			mountains.add(mtn1);
+			mountains.add(mtn2);
+			mountains.add(mtn3);
+			mountains.add(mtn4);
+		} catch (IOException e) {
+		}
+	}
+		
+	private static void randomizer(String category) {
 
-    ImageIcon mountb = new ImageIcon(mtnb);
-    Image mtn2 = mountb.getImage();
-    mountains.add(mtn2);
+		if(category.equals("mountain")) {
+			mtnClick = true; 
+		}else if(category.equals("arrow")) {
+			mtnClick = false;
+		}
+	}
 
-    ImageIcon mountc = new ImageIcon(mtnc);
-    Image mtn3 = mountc.getImage();
-    mountains.add(mtn3);
+	public void mouseClicked(MouseEvent arg0) { 
+		if(mtnClick) {
+			PointerInfo a = MouseInfo.getPointerInfo();
+			Point b = a.getLocation();
+			int x = (int) b.getX();
+			int y = (int) b.getY(); 
+			
+			BufferedImage buff = (BufferedImage) mountains.get(0);
+			Graphics2D toGraphics = buff.createGraphics();
 
-    ImageIcon mountd = new ImageIcon(mtnd);
-    Image mtn4 = mountd.getImage();
-    mountains.add(mtn4);
-  }
-  
-  private static void randomizer(String category) {
-  //use random function to select a random-image, assoc boolean
+			toGraphics.drawImage(mountains.get(0), x, y, null);
+		}
+	}
 
-    if(mountains.size() == 0) {
-      initializer();
-    }
-  //if click=true and boolean==true, set boolean=false and put image on screen
-    else if(category.equals("mountain")） {
-       mtnClick = true; 
-    }
-            
-    else if(category.equals("arrow")) {
-      mtnClick = false;
-    }
-
-  }
-     @Override
-     public void mouseClicked(MouseEvent arg0) { 
-       if(mtnClick) {
-          PointerInfo a = MouseInfo.getPointerInfo();
-          Point b = a.getLocation();
-          int x = (int) b.getX();
-          int y = (int) b.getY();
-          
-          drawImage(mtn1, x, y, null);
-       }
-     }
-
-     @Override
      public void mouseEntered(MouseEvent arg0) { }
 
-     @Override
      public void mouseExited(MouseEvent arg0) { }
 
-     @Override
      public void mousePressed(MouseEvent arg0) { }
 
-     @Override
      public void mouseReleased(MouseEvent arg0) { }
-            
-     private void draw(Graphics brush, Image mtn1) {
-       brush.drawImage(
-     }
 
 }
