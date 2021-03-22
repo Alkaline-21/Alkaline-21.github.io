@@ -11,7 +11,7 @@ import java.awt.PointerInfo;
 import java.awt.MouseInfo;
 
 public class code {
-	boolean mtnClick = false;
+	let mtnClick = false;
 	ArrayList<Image> mountains = new ArrayList<Image>();
 
 	public code() {
@@ -38,16 +38,32 @@ public class code {
 		}
 	}
 
+function selector(category) {
+	if (category === 'mountain') {
+		mtnClick = true;
+	}
+	else if (category === 'arrow') {
+		mtnClick = false;
+	}
+}
+		
 const para = document.querySelector('mtn-button');
 
-para.addEventListener('click', makeMountain);
+para.addEventListener('click', makeLandforms);
 
-function makeMountain() {
-  let name = prompt('Enter a new name');
-  para.textContent = 'Player 1: ' + name;
+function makeLandforms() {
+	if (mtnClick === true) {
+		let image = randomizer('mountain');
+  		let name = prompt('Enter a new name');
+ 		para.textContent = 'Player 1: ' + name;
+	}
 }
 
-function randomizer() {
+function randomizer(formCat) {
+	//random number, per #, return diff image
+	if (formCat === 'mountain') {
+		let whichOne = Math.random()*
+	}
 }
 
 function 
