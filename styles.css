@@ -38,13 +38,9 @@ img {
   text-align: right;
 }
 
-.subtitles {
+.cat-titles {
   color: #FFFFFF;
-}
-
-html { 
-  background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed; 
-  background-size: cover;
+  font-family: 'Cinzel', serif;
 }
 
 .square {
