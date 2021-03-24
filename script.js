@@ -12,22 +12,6 @@ import java.awt.MouseInfo;
 
 public class code {
 	let mtnClick = false;
-	ArrayList<Image> mountains = new ArrayList<Image>();
-
-	public code() {
-		try {
-			Image mtn1 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains1.jpg"));	  
-			Image mtn2 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains2.jpg"));	  
-			Image mtn3 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains3.jpg"));	  
-			Image mtn4 = ImageIO.read(new FileInputStream("C:\\Windows\\system32>\\Desktop\\Application\\Visuals\\Mountains4.jpg"));	  
-
-			mountains.add(mtn1);
-			mountains.add(mtn2);
-			mountains.add(mtn3);
-			mountains.add(mtn4);
-		} catch (IOException e) {
-		}
-	}
 
 var mtnArray = new Array();
 
@@ -52,48 +36,42 @@ function selector(category) {
 	}
 }
 		
-const para = document.querySelector('mtn-button');
+const para = document.querySelector('bkg');
 
 para.addEventListener('click', makeLandforms);
 
 function makeLandforms() {
 	if (mtnClick === true) {
-		let image = randomizer('mountain');
-  		let name = prompt('Enter a new name');
- 		para.textContent = 'Player 1: ' + name;
-	}
-}
 
-function randomizer(formCat) {
-	//random number, per #, return diff image
-	if (formCat === 'mountain') {
-		let whichOne = Math.random()*
-	}
-}
+		document.onclick = userClicked;
+		function userClicked(event) {
+			var x = event.clientX;
+			var y = event.clientY;
 
-function 
+			let which = Math.floor(Math.random()*mtnArray.length);
 
-
-	public void mouseClicked(MouseEvent arg0) { 
-		if(mtnClick) {
-			PointerInfo a = MouseInfo.getPointerInfo();
-			Point b = a.getLocation();
-			int x = (int) b.getX();
-			int y = (int) b.getY(); 
+			if (which = 0) {
+				var clrMountain = document.getElementById("clrMountain1");
+			}
+			else if (which = 1) {
+				var clrMountain = document.getElementById("clrMountain2");
+			}
+			else if (which = 2) {
+				var clrMountain = document.getElementById("clrMountain3");
+			}
+			else if (which = 3) {
+				var clrMountain = document.getElementById("clrMountain4");
+			}
 			
-			BufferedImage buff = (BufferedImage) mountains.get(0);
-			Graphics2D toGraphics = buff.createGraphics();
-
-			toGraphics.drawImage(mountains.get(0), x, y, null);
+			clrMountain.style.display = '';
+			clrMountain.style.position = 'absolute';
+			clrMountain.style.left = x + 'px';
+			clrMountain.style.top = y + 'px';
 		}
 	}
+}
 
-     public void mouseEntered(MouseEvent arg0) { }
 
-     public void mouseExited(MouseEvent arg0) { }
-
-     public void mousePressed(MouseEvent arg0) { }
-
-     public void mouseReleased(MouseEvent arg0) { }
+function () {}
 
 }
