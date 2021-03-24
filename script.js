@@ -28,15 +28,20 @@ public class code {
 		} catch (IOException e) {
 		}
 	}
-		
-	public void selector(String category) {
 
-		if(category.equals("mountain")) {
-			mtnClick = true; 
-		}else if(category.equals("arrow")) {
-			mtnClick = false;
-		}
-	}
+var mtnArray = new Array();
+
+mtnArray[0] = new Image();
+mtnArray[0].src = 'Visuals/Mountains1.jpg';
+
+mtnArray[1] = new Image();
+mtnArray[1].src = 'Visuals/Mountains2.jpg';
+
+mtnArray[2] = new Image();
+mtnArray[2].src = 'Visuals/Mountains3.jpg';
+
+mtnArray[3] = new Image();
+mtnArray[3].src = 'Visuals/Mountains4.jpg';
 
 function selector(category) {
 	if (category === 'mountain') {
