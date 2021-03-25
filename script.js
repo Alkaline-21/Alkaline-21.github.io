@@ -1,18 +1,6 @@
-import java.io.*;
-import java.util.ArrayList;
-import java.lang.Math;
-import java.awt.Graphics2D;
-import java.awt.event.MouseEvent;
-import java.awt.Image;
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.awt.Point;
-import java.awt.PointerInfo;
-import java.awt.MouseInfo;
-
 public class code {
-	let mtnClick = false;
 
+let mtnClick = false;
 var mtnArray = new Array();
 
 mtnArray[0] = new Image();
@@ -42,8 +30,8 @@ para.addEventListener('click', makeLandforms);
 
 function makeLandforms() {
 	if (mtnClick === true) {
-
 		document.onclick = userClicked;
+		
 		function userClicked(event) {
 			var x = event.clientX;
 			var y = event.clientY;
