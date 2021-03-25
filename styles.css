@@ -35,13 +35,22 @@ img {
 
 #landforms-title {
   font-size: 25 px;
-  text-align: right;
+  text-align: center;
 }
 
 .cat-titles {
   color: #FFFFFF;
   font-family: 'Cinzel', serif;
   text-align: left;
+}
+
+.cat-box {
+  border: 1px solid lightBlue;
+  box-sizing: border-box;
+  background-color: 4b6794;
+  height: 300 px;
+  width: 200 px;
+  padding: 15 px 10 px;
 }
 
 .square {
