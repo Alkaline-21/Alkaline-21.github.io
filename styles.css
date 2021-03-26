@@ -63,3 +63,6 @@ img {
    background-color: lightBlue;
    color: white;
 }
+
+    background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed; 
+    background-size: cover;
