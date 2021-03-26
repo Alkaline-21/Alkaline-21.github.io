@@ -56,12 +56,12 @@ img {
 .square {
    border: 1px outset lightBlue;
    background-color: 4b6794;
-   height:50px;
-   width:50px;
-   cursor:pointer;
+   height: 50px;
+   width: 50px;
+   cursor: pointer;
 }
 
-.square:hover {
+.square: hover {
    background-color: lightBlue;
-   color:white;
+   color: white;
 }
