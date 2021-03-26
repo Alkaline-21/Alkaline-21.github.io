@@ -1,10 +1,4 @@
-/*.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
+/*
 img {
   .centered {
     position: fixed;
@@ -21,6 +15,10 @@ img {
   -o-background-size: cover;
   background-size: cover;
 */
+.gallery {
+  float: right; 
+  margin: 0px 0px 15px 15px;
+}
 
 .fancy-titles {
   font-family: 'Uncial Antiqua', cursive;
