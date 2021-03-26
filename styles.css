@@ -33,7 +33,6 @@ img {
 
 #landforms-title {
   font-size: 25 px;
-  text-align: center;
 }
 
 .cat-titles {
@@ -64,5 +63,12 @@ img {
    color: white;
 }
 
+#back {
     background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed; 
     background-size: cover;
+}
+
+img.resize {
+  max-width:10%;
+  max-height:10%;
+}
