@@ -24,9 +24,11 @@ function selector(category) {
 	}
 }
 		
-const para = document.querySelector('bkg');
+const para = document.querySelectorAll('mtn-button');
+para.addEventListener('click', selector('mountain'));
 
-para.addEventListener('click', makeLandforms);
+const para = document.querySelectorAll('arr-button');
+para.addEventListener('click', selector('arrow'));
 
 function makeLandforms() {
 	if (mtnClick === true) {
