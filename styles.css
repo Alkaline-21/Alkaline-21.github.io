@@ -14,7 +14,7 @@ img {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-*/
+
 span {
    display: inline-block;
 }
@@ -30,7 +30,7 @@ img {
   width: 50 px;
   height: 40 px;
 }
-
+*/
 .fancy-titles {
   font-family: 'Uncial Antiqua', cursive;
   text-align: center;
