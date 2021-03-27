@@ -61,8 +61,3 @@ function makeLandforms() {
 		}
 	}
 }
-
-
-function () {}
-
-}
