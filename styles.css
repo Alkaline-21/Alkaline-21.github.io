@@ -18,6 +18,8 @@ img {
 .gallery {
   float: right; 
   margin: 0px 0px 15px 15px;
+  width: 50 px;
+  height: auto;
 }
 
 .fancy-titles {
@@ -66,9 +68,4 @@ img {
 #back {
     background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed; 
     background-size: cover;
-}
-
-.resize {
-  width: 50 px;
-  height: auto;
 }
