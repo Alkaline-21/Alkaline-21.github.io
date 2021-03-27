@@ -31,33 +31,32 @@ para.addEventListener('click', selector('mountain'));
 const para = document.querySelectorAll('arr-button');
 para.addEventListener('click', selector('arrow'));
 
-function makeLandforms() {
+document.onclick = userClicked;
+
+function userClicked(event) {
+	var x = event.clientX;
+	var y = event.clientY;
+
 	while (mtnClick === true) {
-		document.onclick = userClicked;
-		
-		function userClicked(event) {
-			var x = event.clientX;
-			var y = event.clientY;
 
-			let which = Math.floor(Math.random()*mtnArray.length);
+		let which = Math.floor(Math.random()*mtnArray.length);
 
-			if (which = 0) {
-				var clrMountain = document.getElementById("clrMountain1");
-			}
-			else if (which = 1) {
-				var clrMountain = document.getElementById("clrMountain2");
-			}
-			else if (which = 2) {
-				var clrMountain = document.getElementById("clrMountain3");
-			}
-			else if (which = 3) {
-				var clrMountain = document.getElementById("clrMountain4");
-			}
-			
-			clrMountain.style.display = '';
-			clrMountain.style.position = 'absolute';
-			clrMountain.style.left = x + 'px';
-			clrMountain.style.top = y + 'px';
+		if (which = 0) {
+			var clrMountain = document.getElementById("clrMountain1");
 		}
+		else if (which = 1) {
+			var clrMountain = document.getElementById("clrMountain2");
+		}
+		else if (which = 2) {
+			var clrMountain = document.getElementById("clrMountain3");
+		}
+		else if (which = 3) {
+			var clrMountain = document.getElementById("clrMountain4");
+		}
+
+		clrMountain.style.display = '';
+		clrMountain.style.position = 'absolute';
+		clrMountain.style.left = x + 'px';
+		clrMountain.style.top = y + 'px';
 	}
 }
