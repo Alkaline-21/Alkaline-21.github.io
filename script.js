@@ -18,6 +18,7 @@ mtnArray[3].src = 'Visuals/Mountains4.jpg';
 function selector(category) {
 	if (category === 'mountain') {
 		mtnClick = true;
+		makeLandForms();
 	}
 	else if (category === 'arrow') {
 		mtnClick = false;
@@ -31,7 +32,7 @@ const para = document.querySelectorAll('arr-button');
 para.addEventListener('click', selector('arrow'));
 
 function makeLandforms() {
-	if (mtnClick === true) {
+	while (mtnClick === true) {
 		document.onclick = userClicked;
 		
 		function userClicked(event) {
