@@ -31,6 +31,10 @@ img {
   height: 40 px;
 }
 */
+.gallery {
+  
+}
+
 .fancy-titles {
   font-family: 'Uncial Antiqua', cursive;
   text-align: center;
@@ -59,6 +63,7 @@ img {
   width: 200 px;
   padding: 15 px 10 px;
   box-sizing: border-box;
+  display: inline-block;
 }
 
 .square {
