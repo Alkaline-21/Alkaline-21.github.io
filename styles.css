@@ -68,6 +68,12 @@ img {
   overflow: auto;
 }
 
+.cat-images {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
 .square {
    border: 1px outset lightBlue;
    background-color: #4b6794;
