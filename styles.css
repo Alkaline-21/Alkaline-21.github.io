@@ -64,6 +64,7 @@ img {
   padding: 15 px 10 px;
   box-sizing: border-box;
   display: inline-block;
+  float: right;
 }
 
 .square {
