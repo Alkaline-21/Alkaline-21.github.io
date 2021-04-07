@@ -65,6 +65,7 @@ img {
   box-sizing: border-box;
   display: inline-block;
   float: right;
+  overflow: auto;
 }
 
 .square {
