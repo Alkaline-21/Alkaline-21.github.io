@@ -58,7 +58,7 @@ img {
 
 .cat-box {
   border: 1px solid lightBlue;
-  background-color: 4b6794;
+  background-color: #4b6794;
   height: 300 px;
   width: 200 px;
   padding: 15 px 10 px;
@@ -68,7 +68,7 @@ img {
 
 .square {
    border: 1px outset lightBlue;
-   background-color: 4b6794;
+   background-color: #4b6794;
    height: 50px;
    width: 50px;
    cursor: pointer;
@@ -80,6 +80,6 @@ img {
 }
 
 body {
-    background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed; 
+    background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed;
     background-size: cover;
 }
