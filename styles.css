@@ -87,7 +87,11 @@ img {
    color: white;
 }
 
-body {
-    background: url("Visuals/Ocean2.jpg") repeat center center fixed, url("Visuals/Parchment Texture.jpg") repeat center center fixed;
-    background-size: cover;
+.bkg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+
+    min-width: 100%;
+    min-height: 100%;
 }
