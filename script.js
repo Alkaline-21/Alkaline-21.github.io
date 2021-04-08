@@ -61,4 +61,53 @@ function userClicked(event) {
 		clrMountain.style.top = y + 'px';
     }
 }
+
+$(document).ready(function () {
+    $(".insert-image").on('click', function (event) {
+        event.preventDefault();
+
+        var x = document.createElement('img');
+        x.src = "http://nuclearpixel.com/content/icons/2010-02-09_stellar_icons_from_space_from_2005/earth_128.png";
+        insertNodeOverSelection(x, document.getElementById('field'));
+    });
+
+    function insertNodeOverSelection(node, containerNode) {
+        var sel, range, html, str;
+
+
+        if (window.getSelection) {
+            sel = window.getSelection();
+            if (sel.getRangeAt && sel.rangeCount) {
+                range = sel.getRangeAt(0);
+                if (isOrContainsNode(containerNode, range.commonAncestorContainer)) {
+                    range.deleteContents();
+                    range.insertNode(node);
+                } else {
+                    containerNode.appendChild(node);
+                }
+            }
+        } else if (document.selection && document.selection.createRange) {
+            range = document.selection.createRange();
+            if (isOrContainsNode(containerNode, range.parentElement())) {
+                html = (node.nodeType == 3) ? node.data : node.outerHTML;
+                range.pasteHTML(html);
+            } else {
+                containerNode.appendChild(node);
+            }
+        }
+    }
+
+    function isOrContainsNode(ancestor, descendant) {
+        var node = descendant;
+        while (node) {
+            if (node === ancestor) {
+                return true;
+            }
+            node = node.parentNode;
+        }
+        return false;
+    }
+
+});
+
 }
