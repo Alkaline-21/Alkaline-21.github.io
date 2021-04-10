@@ -39,26 +39,34 @@ img {
   font-family: 'Uncial Antiqua', cursive;
   text-align: center;
   color: #4b6794;
+  position: relative;
+  z-index: 3;
 }
 
 #parchment-title {
   font-size: 50 px;
   text-align: center;
+  position: relative;
+  z-index: 3;
 }
 
 #landforms-title {
   font-size: 25 px;
+  position: relative;
+  z-index: 3;
 }
 
 .cat-titles {
   color: #FFFFFF;
   font-family: 'Cinzel', serif;
   text-align: left;
+  position: relative;
+  z-index: 4;
 }
 
 .cat-box {
   border: 1px solid lightBlue;
-  background-color: #4b6794;
+  background-color: #b5b6e5;
   height: 300 px;
   width: 200 px;
   padding: 15 px 10 px;
@@ -66,20 +74,26 @@ img {
   display: inline-block;
   float: right;
   overflow: auto;
+  position: relative;
+  z-index: 3;
 }
 
 .cat-images {
   float: left;
   width: 25%;
   padding: 5px;
+  position: relative;
+  z-index: 4;
 }
 
 .square {
    border: 1px outset lightBlue;
-   background-color: #4b6794;
+   background-color: #b5b6e5;
    height: 50px;
    width: 50px;
    cursor: pointer;
+   position: relative;
+   z-index: 4;
 }
 
 .square: hover {
