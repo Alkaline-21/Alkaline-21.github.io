@@ -63,11 +63,11 @@ function userClicked(event) {
 }
 
 $(document).ready(function () {
-    $(".insert-image").on('click', function (event) {
+    $(".mtn-button").on('click', function (event) {
         event.preventDefault();
 
         var x = document.createElement('img');
-        x.src = "http://nuclearpixel.com/content/icons/2010-02-09_stellar_icons_from_space_from_2005/earth_128.png";
+        x.src = "mtnArray[Math.random()]";
         insertNodeOverSelection(x, document.getElementById('field'));
     });
 
