@@ -1,4 +1,5 @@
-public class code {
+import $ from 'jquery'
+
 let mtnClick = false;
 var mtnArray = [];
 
@@ -25,7 +26,7 @@ function selector(category) {
 		mtnClick = false;
 	}
 }
-		
+/*		
 const uno = document.querySelectorAll('mtn-button');
 uno.addEventListener('click', selector('mountain'));
 
@@ -33,6 +34,7 @@ const dos = document.querySelectorAll('arr-button');
 dos.addEventListener('click', selector('arrow'));
 
 document.onclick = userClicked;
+*/
 
 function userClicked(event) {
 	var x = event.clientX;
@@ -66,14 +68,13 @@ $(document).ready(function () {
     $(".mtn-button").on('click', function (event) {
         event.preventDefault();
 
-        var x = document.createElement('img');
-        x.src = "mtnArray[Math.random()]";
+        var x = document.createElement('clrMountain1');
+        x.src = "mtnArray[1]";
         insertNodeOverSelection(x, document.getElementById('field'));
     });
 
     function insertNodeOverSelection(node, containerNode) {
         var sel, range, html, str;
-
 
         if (window.getSelection) {
             sel = window.getSelection();
@@ -110,4 +111,3 @@ $(document).ready(function () {
 
 });
 
-}
