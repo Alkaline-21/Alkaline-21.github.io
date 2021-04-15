@@ -65,7 +65,7 @@ function userClicked(event) {
 }
 
 $(document).ready(function () {
-    $('.mtn-button').on('click', function (event) {
+    $('#mtn-button').on('click', function (event) {
         event.preventDefault();
 
         var x = document.createElement('clrMountain1');
