@@ -64,6 +64,9 @@ img {
   z-index: 4;
 }
 
+.title-box {
+}
+
 .cat-box {
   border: 1px solid lightBlue;
   background-color: #b5b6e5;
