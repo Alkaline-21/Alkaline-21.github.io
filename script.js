@@ -69,13 +69,13 @@ var _URL = window.URL || window.webkitURL;
 $("#mtn-button").click(function () {
     var mtnClick = true;
     var image;
-    if (mtnClick === true) {
-        image = new Image();
+    if (mtnClick = true) {
+        image = mtnArray[0];
         image.onload = function () {
             $("#field").append(this);
             $(this).attr("id", "image");
         }
-        image.src = _URL.createObjectURL(file);
+        image.src = _URL.createObjectURL('Visuals/Mountain1.jpg');
     }
 });
 
