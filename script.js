@@ -64,6 +64,47 @@ function userClicked(event) {
     }
 }
 
+function outsideClick(event, notelemA, notelemB, notelemC)	{
+	notelemA = $(notelemA); 
+	notelemB = $(notelemB); 
+	notelemC = $(notelemC); 
+
+	var clickedOut = true, i, lenA = notelemA.length;
+	for (i = 0;i < lenA;i++)  {
+		if (event.target == notelemA[i] || notelemA[i].contains(event.target)) {
+		    clickedOut = false;
+		}
+	}
+	
+	var lenB = notelemB.length;
+	for (i = 0;i < lenA;i++)  {
+		if (event.target == notelemB[i] || notelemB[i].contains(event.target)) {
+		    clickedOut = false;
+		}
+	}
+	
+	var lenC = notelemC.length;
+	for (i = 0;i < lenA;i++)  {
+		if (event.target == notelemC[i] || notelemC[i].contains(event.target)) {
+		    clickedOut = false;
+		}
+	}
+	
+	if (clickedOut) return true;
+	else return false;
+}
+
+var modalA = document.getElementById("title-box");
+var modalA = document.getElementById("cat-box");
+var modalA = document.getElementById("selections-box");
+
+window.addEventListener('click', function(e) {
+   if (outsideClick(e, modalA, modalB, modalC)) {
+   		// close modal
+   }
+});
+
+/*
 var _URL = window.URL || window.webkitURL;
 
 $("#mtn-button").click(function () {
@@ -79,7 +120,6 @@ $("#mtn-button").click(function () {
     }
 });
 
-/*
 $(document).ready(function () {
     $('#mtn-button').on('click', function (event) {
         event.preventDefault();
