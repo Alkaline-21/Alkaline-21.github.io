@@ -112,3 +112,9 @@ img {
     min-width: 100%;
     min-height: 100%;
 }
+
+#myCanvas {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
