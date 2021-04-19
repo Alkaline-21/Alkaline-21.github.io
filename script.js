@@ -20,7 +20,6 @@ var clrMountain;
 function selector(category) {
 	if (category === 'mountain') {
 		mtnClick = true;
-		//makeLandForms();
 	}
 	else if (category === 'arrow') {
 		mtnClick = false;
@@ -34,7 +33,7 @@ const dos = document.querySelectorAll('arr-button');
 dos.addEventListener('click', selector('arrow'));
 
 document.onclick = userClicked;
-*/
+---
 
 function userClicked(event) {
 	var x = event.clientX;
@@ -63,7 +62,7 @@ function userClicked(event) {
 		clrMountain.style.top = y + 'px';
     }
 }
-
+*/
 function outsideClick(event, notelemA, notelemB, notelemC)	{
 	notelemA = $(notelemA); 
 	notelemB = $(notelemB); 
@@ -94,16 +93,30 @@ function outsideClick(event, notelemA, notelemB, notelemC)	{
 	else return false;
 }
 
-var modalA = document.getElementById("title-box");
-var modalA = document.getElementById("cat-box");
-var modalA = document.getElementById("selections-box");
+function featureMaker(canvas, event) {
+	var modalA = document.getElementById("title-box");
+	var modalA = document.getElementById("cat-box");
+	var modalA = document.getElementById("selections-box");
+	
+	let rect = canvas.getBoundingClientRect();
+	let x = event.clientX - rect.left;
+	let y = event.clientY - rect.top;
 
-window.addEventListener('click', function(e) {
-   if (outsideClick(e, modalA, modalB, modalC)) {
-   	
-   }
-});
+	window.addEventListener('click', function(e) {
+	   if (outsideClick(e, modalA, modalB, modalC)) {
+		   
+		if(mtnClick) {
+			var img = document.createElement("img");
+			img.src = mtnArray[Math.ceil(Math.random()*4)];
+			img.width = 75;
+			img.height = 50;
+			img.alt = 'a mountain';
 
+			document.body.appendChild(img);
+		}
+	   }
+	});
+}
 /*
 var _URL = window.URL || window.webkitURL;
 
