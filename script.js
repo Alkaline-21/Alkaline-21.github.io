@@ -100,7 +100,7 @@ var modalA = document.getElementById("selections-box");
 
 window.addEventListener('click', function(e) {
    if (outsideClick(e, modalA, modalB, modalC)) {
-   		// close modal
+   	
    }
 });
 
