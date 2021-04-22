@@ -93,30 +93,47 @@ function outsideClick(event, notelemA, notelemB, notelemC)	{
 	else return false;
 }
 
-function featureMaker(canvas, event) {
+function getX(canvas, event) {
 	var modalA = document.getElementById("title-box");
 	var modalA = document.getElementById("cat-box");
 	var modalA = document.getElementById("selections-box");
 	
 	let rect = canvas.getBoundingClientRect();
 	let x = event.clientX - rect.left;
-	let y = event.clientY - rect.top;
-
-	window.addEventListener('click', function(e) {
-	   if (outsideClick(e, modalA, modalB, modalC)) {
-		   
-		if(mtnClick) {
-			var img = document.createElement("img");
-			img.src = mtnArray[Math.ceil(Math.random()*4)];
-			img.width = 75;
-			img.height = 50;
-			img.alt = 'a mountain';
-
-			document.body.appendChild(img);
-		}
-	   }
-	});
+	return x;
 }
+
+function getY(canvas, event) {
+	var modalA = document.getElementById("title-box");
+	var modalA = document.getElementById("cat-box");
+	var modalA = document.getElementById("selections-box");
+	
+	let rect = canvas.getBoundingClientRect();
+	let y = event.clientY - rect.top;
+	return y;
+}
+
+window.addEventListener('click', function(e) {
+   if (outsideClick(e, modalA, modalB, modalC)) {
+
+	if(mtnClick) {
+		var img = document.createElement("img");
+		img.src = mtnArray[Math.ceil(Math.random()*4)];
+		img.width = 75;
+		img.height = 50;
+		img.alt = 'a mountain';
+		
+		var canvas = document.getElementById('myCanvas');
+		var x = getX(canvas, event);
+		var y = getY(canvas, event);
+		img.style.marginLeft = y;
+		img.style.marginTop = x;
+
+		document.body.appendChild(img);
+	}
+   }
+});
+
 /*
 var _URL = window.URL || window.webkitURL;
 
