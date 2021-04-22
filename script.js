@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery';
 
 let mtnClick = false;
 var mtnArray = [];
@@ -69,23 +69,24 @@ function outsideClick(event, notelemA, notelemB, notelemC)	{
 	notelemC = $(notelemC); 
 
 	var clickedOut = true, i, lenA = notelemA.length;
+	
 	for (i = 0;i < lenA;i++)  {
 		if (event.target == notelemA[i] || notelemA[i].contains(event.target)) {
-		    clickedOut = false;
+			clickedOut = false;
 		}
 	}
 	
 	var lenB = notelemB.length;
 	for (i = 0;i < lenA;i++)  {
 		if (event.target == notelemB[i] || notelemB[i].contains(event.target)) {
-		    clickedOut = false;
+			clickedOut = false;
 		}
 	}
 	
 	var lenC = notelemC.length;
 	for (i = 0;i < lenA;i++)  {
 		if (event.target == notelemC[i] || notelemC[i].contains(event.target)) {
-		    clickedOut = false;
+			clickedOut = false;
 		}
 	}
 	
@@ -94,27 +95,24 @@ function outsideClick(event, notelemA, notelemB, notelemC)	{
 }
 
 function getX(canvas, event) {
-	var modalA = document.getElementById("title-box");
-	var modalA = document.getElementById("cat-box");
-	var modalA = document.getElementById("selections-box");
-	
 	let rect = canvas.getBoundingClientRect();
 	let x = event.clientX - rect.left;
 	return x;
 }
 
 function getY(canvas, event) {
-	var modalA = document.getElementById("title-box");
-	var modalA = document.getElementById("cat-box");
-	var modalA = document.getElementById("selections-box");
-	
 	let rect = canvas.getBoundingClientRect();
 	let y = event.clientY - rect.top;
 	return y;
 }
 
 window.addEventListener('click', function(e) {
-   if (outsideClick(e, modalA, modalB, modalC)) {
+
+	var modalA = document.getElementById("title-box");
+	var modalB = document.getElementById("cat-box");
+	var modalC = document.getElementById("selections-box");
+	
+	if (outsideClick(e, modalA, modalB, modalC)) {
 
 	if(mtnClick) {
 		var img = document.createElement("img");
@@ -195,6 +193,4 @@ $(document).ready(function () {
         return false;
     }
 */
-
-});
 
