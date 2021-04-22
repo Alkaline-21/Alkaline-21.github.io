@@ -70,7 +70,7 @@ img {
 .cat-box {
   border: 1px solid lightBlue;
   background-color: #b5b6e5;
-  height: 300 px;
+  height: 500 px;
   width: 200 px;
   padding: 15 px 10 px;
   box-sizing: border-box;
@@ -79,6 +79,12 @@ img {
   overflow: auto;
   position: relative;
   z-index: 3;
+}
+
+#selections-box {
+  border: 1px solid lightBlue;
+  background-color: #b5b6e5;
+  height: 
 }
 
 .cat-images {
