@@ -117,21 +117,21 @@ window.addEventListener('click', function(e) {
 	
 	if (outsideClick(e, modalA, modalB, modalC)) {
 
-	if(mtnClick) {
-		var img = document.createElement("img");
-		img.src = mtnArray[Math.ceil(Math.random()*4)];
-		img.width = 75;
-		img.height = 50;
-		img.alt = 'a mountain';
-		
-		var canvas = document.getElementById('myCanvas');
-		var x = getX(canvas, event);
-		var y = getY(canvas, event);
-		img.style.marginLeft = y;
-		img.style.marginTop = x;
+		if(mtnClick) {
+			var img = document.createElement("img");
+			img.src = mtnArray[Math.ceil(Math.random()*4)];
+			img.width = 75;
+			img.height = 50;
+			img.alt = 'a mountain';
 
-		document.body.appendChild(img);
-	}
+			var canvas = document.getElementById('myCanvas');
+			var x = getX(canvas, event);
+			var y = getY(canvas, event);
+			img.style.marginLeft = y;
+			img.style.marginTop = x;
+
+			document.body.appendChild(img);
+		}
    }
 });
 
