@@ -127,8 +127,8 @@ window.addEventListener('click', function(e) {
 			var canvas = document.getElementById('myCanvas');
 			var x = getX(canvas, event);
 			var y = getY(canvas, event);
-			img.style.marginLeft = y;
-			img.style.marginTop = x;
+			img.style.marginLeft = x;
+			img.style.marginTop = y;
 
 			document.body.appendChild(img);
 		}
