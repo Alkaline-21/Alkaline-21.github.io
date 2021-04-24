@@ -119,7 +119,7 @@ window.addEventListener('click', function(e) {
 
 		if(mtnClick) {
 			var img = document.createElement("img");
-			img.src = mtnArray[Math.ceil(Math.random()*4)];
+			img.src = 'Visuals/Mountains1.jpg';
 			img.width = 75;
 			img.height = 50;
 			img.alt = 'a mountain';
