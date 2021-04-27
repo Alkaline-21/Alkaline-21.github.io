@@ -84,7 +84,8 @@ img {
 #selections-box {
   border: 1px solid lightBlue;
   background-color: #b5b6e5;
-  height: 
+  height: 1000 px;
+  width: 60 px;
 }
 
 .cat-images {
@@ -98,14 +99,14 @@ img {
 .square {
    border: 1px outset lightBlue;
    background-color: #b5b6e5;
-   height: 50px;
-   width: 50px;
+   height: 5%;
+   width: 90%;
    cursor: pointer;
    position: relative;
    z-index: 4;
 }
 
-.square: hover {
+.square:hover {
    background-color: lightBlue;
    color: white;
 }
