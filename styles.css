@@ -84,8 +84,8 @@ img {
 #selections-box {
   border: 1px solid lightBlue;
   background-color: #b5b6e5;
-  height: 1000 px;
-  width: 60 px;
+  height: 75%;
+  width: 5%;
 }
 
 .cat-images {
@@ -99,7 +99,7 @@ img {
 .square {
    border: 1px outset lightBlue;
    background-color: #b5b6e5;
-   height: 5%;
+   height: 10%;
    width: 90%;
    cursor: pointer;
    position: relative;
