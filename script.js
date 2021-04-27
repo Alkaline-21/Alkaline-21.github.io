@@ -4,6 +4,7 @@ script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
 
 let mtnClick = false;
+let treeClick = false;
 var mtnArray = [];
 
 mtnArray[0] = new Image();
@@ -120,7 +121,7 @@ window.addEventListener('click', function(e) {
 		if(mtnClick) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
-			img.src = mtnArray[Math.ceil(Math.random()*4)].src;
+			img.src = mtnArray[Math.floor(Math.random()*4)].src;
 			img.width = 75;
 			img.height = 50;
 			img.alt = 'a mountain';
