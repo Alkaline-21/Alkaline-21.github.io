@@ -85,6 +85,7 @@ img {
   padding: 5px;
   position: relative;
   z-index: 4;
+  max-width: 75 px;
 }
 
 #selections-box {
