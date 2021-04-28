@@ -155,8 +155,7 @@ window.addEventListener('click', function(e) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
 			img.src = treeArray[Math.floor(Math.random()*3)].src;
-			img.width = 75;
-			img.height = 50;
+			img.width = 30;
 			img.alt = 'a tree';
 
 			var canvas = document.getElementById('myCanvas');
@@ -164,8 +163,18 @@ window.addEventListener('click', function(e) {
 			var y = getY(canvas, event);
 			img.style.marginLeft = x;
 			img.style.marginTop = y;
+			/*
+			var width = img.width;
+			var height = img.height;
+			img.clientWidth = calculateAspectRatioFit(width, height, 25, 20);*/
 
 			document.body.appendChild(img);
 		}
    }
 });
+
+function calculateAspectRatioFit(srcWidth, srcHeight, maxWidth, maxHeight) {
+
+    var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+    return { width: srcWidth*ratio, height: srcHeight*ratio };
+ }
