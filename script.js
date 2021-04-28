@@ -19,13 +19,21 @@ mtnArray[2].src = 'Visuals/Mountains3.jpg';
 mtnArray[3] = new Image();
 mtnArray[3].src = 'Visuals/Mountains4.jpg';
 
+treeArray[
+
 var clrMountain;
 
 function selector(category) {
 	if (category === 'mountain') {
 		mtnClick = true;
+		treeClick = false;
 	}
 	else if (category === 'arrow') {
+		mtnClick = false;
+		treeClick = false;
+	}
+	else if (category === 'tree') {
+		treeClick = true;
 		mtnClick = false;
 	}
 }
@@ -119,6 +127,22 @@ window.addEventListener('click', function(e) {
 	if (outsideClick(e, modalA, modalB, modalC)) {
 
 		if(mtnClick) {
+			var img = document.createElement("img");
+			//img.src = 'Visuals/Mountains1.jpg';
+			img.src = mtnArray[Math.floor(Math.random()*4)].src;
+			img.width = 75;
+			img.height = 50;
+			img.alt = 'a mountain';
+
+			var canvas = document.getElementById('myCanvas');
+			var x = getX(canvas, event);
+			var y = getY(canvas, event);
+			img.style.marginLeft = x;
+			img.style.marginTop = y;
+
+			document.body.appendChild(img);
+		}
+		else if (treeClick) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
 			img.src = mtnArray[Math.floor(Math.random()*4)].src;
