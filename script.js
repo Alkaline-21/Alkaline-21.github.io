@@ -149,8 +149,7 @@ window.addEventListener('click', function(e) {
 			img.style.marginLeft = x;
 			img.style.marginTop = y;
 
-			$('.myCanvas').append($("img"))
-			$(".draggable").draggable();
+			document.body.appendChild(img);
 		}
 		else if (treeClick) {
 			var img = document.createElement("img");
@@ -166,8 +165,7 @@ window.addEventListener('click', function(e) {
 			img.style.marginLeft = x;
 			img.style.marginTop = y;
 
-			$('.myCanvas').append($("img"))
-			$(".draggable").draggable();
+			document.body.appendChild(img);
 		}
    }
 });
