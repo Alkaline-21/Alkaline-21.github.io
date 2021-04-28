@@ -155,7 +155,7 @@ window.addEventListener('click', function(e) {
 		else if (treeClick) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
-			img.src = treArray[Math.floor(Math.random()*3)].src;
+			img.src = treeArray[Math.floor(Math.random()*3)].src;
 			img.width = 75;
 			img.height = 50;
 			img.alt = 'a tree';
