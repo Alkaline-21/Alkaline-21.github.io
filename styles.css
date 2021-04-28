@@ -79,19 +79,19 @@ img {
   z-index: 3;
 }
 
-#selections-box {
-  border: 1px solid lightBlue;
-  background-color: #b5b6e5;
-  height: 1000 px;
-  width: 5%;
-}
-
 .cat-images {
   float: left;
   width: 25%;
   padding: 5px;
   position: relative;
   z-index: 4;
+}
+
+#selections-box {
+  border: 1px solid lightBlue;
+  background-color: #b5b6e5;
+  height: 75%;
+  width: 5%;
 }
 
 .square {
@@ -122,4 +122,10 @@ img {
   width: 100%;
   position: absolute;
   height: 100%;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
 }
