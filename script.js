@@ -150,6 +150,7 @@ window.addEventListener('click', function(e) {
 			img.style.marginTop = y;
 
 			document.body.appendChild(img);
+			img.draggable = "true";
 		}
 		else if (treeClick) {
 			var img = document.createElement("img");
@@ -165,7 +166,7 @@ window.addEventListener('click', function(e) {
 			img.style.marginLeft = x;
 			img.style.marginTop = y;
 
-			document.body.appendChild(img);
+			$('.myCanvas').append($("img"))
 		}
    }
 });
