@@ -47,13 +47,11 @@ img {
   font-size: 50 px;
   text-align: center;
   position: relative;
-  z-index: 3;
 }
 
 #landforms-title {
   font-size: 25 px;
   position: relative;
-  z-index: 3;
 }
 
 .cat-titles {
