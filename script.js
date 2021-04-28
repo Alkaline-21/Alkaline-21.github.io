@@ -19,7 +19,16 @@ mtnArray[2].src = 'Visuals/Mountains3.jpg';
 mtnArray[3] = new Image();
 mtnArray[3].src = 'Visuals/Mountains4.jpg';
 
-treeArray[
+var treeArray = [];
+
+treeArray[0] = new Image();
+treeArray[0].src = 'Visuals/Tree2.jpg';
+
+treeArray[1] = new Image();
+treeArray[1].src = 'Visuals/Tree4.jpg';
+
+treeArray[2] = new Image();
+treeArray[2].src = 'Visuals/Tree6.jpg';
 
 var clrMountain;
 
@@ -145,10 +154,10 @@ window.addEventListener('click', function(e) {
 		else if (treeClick) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
-			img.src = mtnArray[Math.floor(Math.random()*4)].src;
+			img.src = treArray[Math.floor(Math.random()*3)].src;
 			img.width = 75;
 			img.height = 50;
-			img.alt = 'a mountain';
+			img.alt = 'a tree';
 
 			var canvas = document.getElementById('myCanvas');
 			var x = getX(canvas, event);
