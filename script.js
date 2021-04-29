@@ -151,7 +151,6 @@ window.addEventListener('click', function(e) {
 			img.style.position = 'absolute';
 
 			document.body.appendChild(img);
-			dragElement(document.getElementById("img"));
 		}
 		else if (treeClick) {
 			var img = document.createElement("img");
@@ -168,11 +167,10 @@ window.addEventListener('click', function(e) {
 			img.style.position = 'absolute';
 
 			document.body.appendChild(img);
-			dragElement(document.getElementById("img"));
 		}
    }
 });
-
+/*
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.onmousedown = dragMouseDown;
@@ -207,3 +205,4 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+*/
