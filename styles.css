@@ -114,12 +114,9 @@ img {
 .bkg {
     background-image: url("Visuals/Parchment Texture.jpg");
     height: 100%;
-    background-position: center;
+    background-position: top;
     background-repeat: repeat;
     background-size: cover;
-    position: absolute; 
-    top: 0; 
-    left: 0; 
 }
 
 #myCanvas {
