@@ -86,6 +86,7 @@ img {
   position: relative;
   z-index: 3;
   display: inline-block;
+  mix-blend-mode: multiply;
 }
 
 #selections-box {
