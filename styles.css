@@ -86,6 +86,7 @@ img {
   position: relative;
   z-index: 4;
   max-width: 25%;
+  display: inline-block;
 }
 
 #selections-box {
