@@ -81,11 +81,10 @@ img {
 
 .cat-images {
   float: left;
-  width: 25%;
+  width: 50 px;
   padding: 5px;
   position: relative;
   z-index: 3;
-  max-width: 25%;
   display: inline-block;
 }
 
