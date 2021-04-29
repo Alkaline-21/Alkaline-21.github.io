@@ -150,6 +150,7 @@ window.addEventListener('click', function(e) {
 			img.style.marginTop = y;
 			img.style.position = 'absolute';
 
+			dragElement(img);
 			document.body.appendChild(img);
 		}
 		else if (treeClick) {
@@ -166,11 +167,12 @@ window.addEventListener('click', function(e) {
 			img.style.marginTop = y;
 			img.style.position = 'absolute';
 
+			dragElement(img);
 			document.body.appendChild(img);
 		}
    }
 });
-/*
+
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.onmousedown = dragMouseDown;
@@ -205,4 +207,3 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
-*/
