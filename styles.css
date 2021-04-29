@@ -85,7 +85,7 @@ img {
   padding: 5px;
   position: relative;
   z-index: 3;
-  width: 75 px;
+  max-width: 25%;
   display: inline-block;
 }
 
