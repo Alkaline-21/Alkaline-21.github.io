@@ -114,6 +114,7 @@ img {
 .bkg {
     background-image: url("Visuals/Parchment Texture.jpg");
     height: 100%;
+    width: 100;
     background-position: top;
     background-repeat: repeat;
     background-size: cover;
