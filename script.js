@@ -207,3 +207,30 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+let isDrawing = false;
+
+window.onload = () => {
+	const canvas = document.getElementById('myCanvas');
+	const context = canvas.getContext('2d');
+	
+	canvas.addEventListener('mousedown', startDrawing);
+	canvas.addEventListener('mouseup', stopDrawing);
+	canvas.addEventListener('mousemove', (event) => draw(event, context));
+
+};
+
+function startDrawing() {
+	isDrawing = true;
+}
+
+function stopDrawing() {
+	isDrawing = false;
+}
+
+function draw(event, context) {
+	if(isDrawing) {
+	context.fillRect(event.pageX, event.pageY, 2, 2);
+	}
+	//https://wanago.io/2019/06/24/creating-a-simple-drawing-app-using-canvas-saving-and-loading-images/
+}
