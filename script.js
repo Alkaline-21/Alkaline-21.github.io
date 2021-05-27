@@ -127,6 +127,24 @@ function getY(canvas, event) {
 	return y;
 }
 
+verySpecific(image) {
+	var img = document.createElement("img");
+	img.src = image.src;
+	img.width = 75;
+	img.height = 50;
+	img.alt = 'your selected image';
+
+	var canvas = document.getElementById('myCanvas');
+	var x = getX(canvas, event);
+	var y = getY(canvas, event);
+	img.style.marginLeft = x;
+	img.style.marginTop = y;
+	img.style.position = 'absolute';
+
+	dragElement(img);
+	document.body.appendChild(img);
+}
+
 window.addEventListener('click', function(e) {
 
 	var modalA = document.getElementById("title-box");
