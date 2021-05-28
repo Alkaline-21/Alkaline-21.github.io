@@ -186,7 +186,7 @@ window.addEventListener('click', function(e) {
 			img.style.position = 'absolute';
 
 			dragElement(img);
-			document.body.appendChild(img);
+			document.getElementByID("myCanvas").appendChild(img);
 		}
    }
 });
@@ -225,7 +225,7 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
-
+/*
 let isDrawing = false;
 
 window.onload = () => {
@@ -252,3 +252,4 @@ function draw(event, context) {
 	}
 	//https://wanago.io/2019/06/24/creating-a-simple-drawing-app-using-canvas-saving-and-loading-images/
 }
+*/
