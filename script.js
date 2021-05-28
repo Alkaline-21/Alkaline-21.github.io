@@ -127,7 +127,7 @@ function getY(canvas, event) {
 	return y;
 }
 
-verySpecific(image) {
+function verySpecific(image) {
 	var img = document.createElement("img");
 	img.src = image.src;
 	img.width = 75;
