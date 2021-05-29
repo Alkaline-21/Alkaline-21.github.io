@@ -136,8 +136,6 @@ function getY(canvas, event) {
 	return y;
 }
 
-var tree1, tree2, tree3, tree4, tree5, tree6;
-tree1 = tree2 = tree3 = tree4 = tree5 = tree6 = false;
 let number = -1;
 
 function verySpecific(landform, num) {
