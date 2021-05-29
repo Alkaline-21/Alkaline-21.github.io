@@ -153,8 +153,8 @@ function verySpecific(landform, number) {
 	var canvas = document.getElementById('myCanvas');
 	var x = getX(canvas, event);
 	var y = getY(canvas, event);
-	img.style.marginLeft = x;
-	img.style.marginTop = y;
+	img.style.marginLeft = 0;
+	img.style.marginTop = 0;
 	img.style.position = 'absolute';
 
 	dragElement(img);
