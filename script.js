@@ -154,7 +154,7 @@ function verySpecific(landform, num) {
 	img.style.position = 'absolute';
 
 	dragElement(img);
-	document.getELementById('myCanvas').appendChild(img);
+	document.getElementById('myCanvas').appendChild(img);
 	}
 }
 	/*
