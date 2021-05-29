@@ -35,7 +35,7 @@ treeArray[4] = new Image();
 treeArray[4].src = 'Visuals/Tree4.jpg';
 
 treeArray[5] = new Image();
-treeArray[5].src = 'Visuals/Tree2.jpg';
+treeArray[5].src = 'Visuals/Tree5.jpg';
 
 treeArray[6] = new Image();
 treeArray[6].src = 'Visuals/Tree6.jpg';
@@ -142,7 +142,7 @@ function verySpecific(landform, num) {
 	if(landform === 'tree') {
 	var img = document.createElement("img");
 	//img.src = 'Visuals/Mountains1.jpg';
-	img.src = treeArray[num].src;
+	img.src = treeArray[parseInt(num)].src;
 	img.width = 22.5;
 	img.alt = 'a tree';
 
