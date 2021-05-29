@@ -6,6 +6,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 let mtnClick = false;
 let treeClick = false;
 var mtnArray = [];
+let number = -1;
 
 mtnArray[0] = new Image();
 mtnArray[0].src = 'Visuals/Mountains1.jpg';
@@ -136,8 +137,6 @@ function getY(canvas, event) {
 	return y;
 }
 
-let number = -1;
-
 function verySpecific(landform, num) {
 	
 	if(landform === 'tree') {
@@ -155,7 +154,7 @@ function verySpecific(landform, num) {
 	img.style.position = 'absolute';
 
 	dragElement(img);
-	document.body.appendChild(img);
+	document.getELementById('myCanvas').appendChild(img);
 	}
 }
 	/*
