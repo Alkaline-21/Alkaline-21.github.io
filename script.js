@@ -136,9 +136,39 @@ function getY(canvas, event) {
 	return y;
 }
 
+var tree1, tree2, tree3, tree4, tree5, tree6;
+tree1 = tree2 = tree3 = tree4 = tree5 = tree6 = false;
+let number = -1;
 
+function verySpecific(landform, num) {
 
-function verySpecific(landform, number) {
+	if(landform === 'tree') {
+		if(num === 1) {
+			tree1 = true;
+			number = 0;
+		}
+		else if(num === 2) {
+			tree2 = true;
+			number = 1;
+		}
+		else if(num === 3) {
+			tree3 = true;
+			number = 2;
+		}
+		else if(num === 4) {
+			tree4 = true;
+			number = 3;
+		}
+		else if(num === 5) {
+			tree5 = true;
+			number = 4;
+		}
+		else if(num === 6) {
+			tree6 = true;
+			number = 5;
+		}
+	}
+	/*
 	var img = document.createElement("img");
 	if(landform === 'tree') {
 		img.src = treeArray[1].src;
@@ -159,6 +189,7 @@ function verySpecific(landform, number) {
 
 	dragElement(img);
 	document.getElementById('myCanvas').appendChild(img);
+	*/
 }
 
 window.addEventListener('click', function(e) {
@@ -191,6 +222,24 @@ window.addEventListener('click', function(e) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
 			img.src = treeArray[Math.floor(Math.random()*6)].src;
+			img.width = 22.5;
+			img.alt = 'a tree';
+
+			var canvas = document.getElementById('myCanvas');
+			var x = getX(canvas, event);
+			var y = getY(canvas, event);
+			img.style.marginLeft = x;
+			img.style.marginTop = y;
+			img.style.position = 'absolute';
+
+			dragElement(img);
+			document.body.appendChild(img);
+		}
+		else if(tree1 || tree2 || tree3 || tree4 || tree5 || tree6) {
+			var img = document.createElement("img");
+			//img.src = 'Visuals/Mountains1.jpg';
+			img.src = treeArray[number].src;
+			number = -1;
 			img.width = 22.5;
 			img.alt = 'a tree';
 
