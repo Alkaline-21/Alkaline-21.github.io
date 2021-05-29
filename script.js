@@ -210,7 +210,7 @@ window.addEventListener('click', function(e) {
 			dragElement(img);
 			document.body.appendChild(img);
 		}
-		else if(number > -1) {
+		if(number > -1) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
 			img.src = treeArray[number].src;
