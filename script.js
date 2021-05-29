@@ -214,7 +214,6 @@ window.addEventListener('click', function(e) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
 			img.src = treeArray[number].src;
-			number = -1;
 			img.width = 22.5;
 			img.alt = 'a tree';
 
@@ -227,6 +226,7 @@ window.addEventListener('click', function(e) {
 
 			dragElement(img);
 			document.body.appendChild(img);
+			number = -1;
 		}
    }
 });
