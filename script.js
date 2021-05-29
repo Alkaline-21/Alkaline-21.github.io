@@ -158,7 +158,7 @@ function verySpecific(landform, number) {
 	img.style.position = 'absolute';
 
 	dragElement(img);
-	document.getElementById("myCanvas").appendChild(img);
+	document.getElementById('myCanvas').appendChild(img);
 }
 
 window.addEventListener('click', function(e) {
