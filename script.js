@@ -129,7 +129,7 @@ function getY(canvas, event) {
 
 function verySpecific(image) {
 	var img = document.createElement("img");
-	img.src = document.getElementById(image).src;
+	img.src = treeArray[1].src;
 	img.src = image.src;
 	img.width = 75;
 	img.height = 50;
