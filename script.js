@@ -146,7 +146,6 @@ function verySpecific(landform, number) {
 	else {
 		img.src = mtnArray[number].src;
 	}
-	img.src = image.src;
 	img.width = 75;
 	img.height = 50;
 	img.alt = 'your selected image';
@@ -159,7 +158,7 @@ function verySpecific(landform, number) {
 	img.style.position = 'absolute';
 
 	dragElement(img);
-	document.body.appendChild(img);
+	document.getElementById("myCanvas").appendChild(img);
 }
 
 window.addEventListener('click', function(e) {
