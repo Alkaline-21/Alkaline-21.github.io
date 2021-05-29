@@ -141,32 +141,7 @@ tree1 = tree2 = tree3 = tree4 = tree5 = tree6 = false;
 let number = -1;
 
 function verySpecific(landform, num) {
-
-	if(landform === 'tree') {
-		if(num === 1) {
-			tree1 = true;
-			number = 0;
-		}
-		else if(num === 2) {
-			tree2 = true;
-			number = 1;
-		}
-		else if(num === 3) {
-			tree3 = true;
-			number = 2;
-		}
-		else if(num === 4) {
-			tree4 = true;
-			number = 3;
-		}
-		else if(num === 5) {
-			tree5 = true;
-			number = 4;
-		}
-		else if(num === 6) {
-			tree6 = true;
-			number = 5;
-		}
+	number = num;
 	}
 	/*
 	var img = document.createElement("img");
@@ -235,7 +210,7 @@ window.addEventListener('click', function(e) {
 			dragElement(img);
 			document.body.appendChild(img);
 		}
-		else if(tree1 || tree2 || tree3 || tree4 || tree5 || tree6) {
+		else if(number > -1) {
 			var img = document.createElement("img");
 			//img.src = 'Visuals/Mountains1.jpg';
 			img.src = treeArray[number].src;
