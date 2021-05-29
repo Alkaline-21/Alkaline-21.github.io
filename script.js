@@ -141,7 +141,7 @@ function getY(canvas, event) {
 function verySpecific(landform, number) {
 	var img = document.createElement("img");
 	if(landform === 'tree') {
-		img.src = treeArray[number].src;
+		img.src = treeArray[1].src;
 	}
 	else {
 		img.src = mtnArray[number].src;
