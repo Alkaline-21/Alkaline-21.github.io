@@ -22,23 +22,23 @@ mtnArray[3].src = 'Visuals/Mountains4.jpg';
 
 var treeArray = [];
 
+treeArray[0] = new Image();
+treeArray[0].src = 'Visuals/Tree1.jpg';
+
 treeArray[1] = new Image();
-treeArray[1].src = 'Visuals/Tree1.jpg';
+treeArray[1].src = 'Visuals/Tree2.jpg';
 
 treeArray[2] = new Image();
-treeArray[2].src = 'Visuals/Tree2.jpg';
+treeArray[2].src = 'Visuals/Tree3.jpg';
 
 treeArray[3] = new Image();
-treeArray[3].src = 'Visuals/Tree3.jpg';
+treeArray[3].src = 'Visuals/Tree4.jpg';
 
 treeArray[4] = new Image();
-treeArray[4].src = 'Visuals/Tree4.jpg';
+treeArray[4].src = 'Visuals/Tree5.jpg';
 
 treeArray[5] = new Image();
-treeArray[5].src = 'Visuals/Tree5.jpg';
-
-treeArray[6] = new Image();
-treeArray[6].src = 'Visuals/Tree6.jpg';
+treeArray[5].src = 'Visuals/Tree6.jpg';
 
 var clrMountain;
 
