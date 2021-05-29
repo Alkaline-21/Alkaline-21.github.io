@@ -187,7 +187,7 @@ window.addEventListener('click', function(e) {
 			img.style.position = 'absolute';
 
 			dragElement(img);
-			document.getElementByID("myCanvas").appendChild(img);
+			document.body.appendChild(img);
 		}
    }
 });
