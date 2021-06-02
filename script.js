@@ -121,8 +121,11 @@ function outsideClick(event, notelemA, notelemB, notelemC)	{
 		}
 	}
 	
-	if (clickedOut) return true;
-	else return false;
+	if (clickedOut) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 function getX(canvas, event) {
