@@ -180,7 +180,7 @@ window.addEventListener('click', function(e) {
 	//img.src = 'Visuals/Mountains1.jpg';
 	img.src = mtnArray[parseInt(specNum)].src;
 	img.width = 22.5;
-	img.alt = 'a tree';
+	img.alt = 'a mountain';
 
 	var canvas = document.getElementById('myCanvas');
 	var x = getX(canvas, event);
