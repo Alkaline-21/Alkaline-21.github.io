@@ -175,6 +175,24 @@ window.addEventListener('click', function(e) {
 	document.getElementById('myCanvas').appendChild(img);
 		console.log('a tree!');
 	}
+	else if(specLandform === 'mtn') {
+	var img = document.createElement("img");
+	//img.src = 'Visuals/Mountains1.jpg';
+	img.src = treeArray[parseInt(specNum)].src;
+	img.width = 22.5;
+	img.alt = 'a tree';
+
+	var canvas = document.getElementById('myCanvas');
+	var x = getX(canvas, event);
+	var y = getY(canvas, event);
+	img.style.marginLeft = x;
+	img.style.marginTop = y;
+	img.style.position = 'absolute';
+
+	dragElement(img);
+	document.getElementById('myCanvas').appendChild(img);
+	console.log('a mountain!');
+	}
 });
 	/*
 	var img = document.createElement("img");
