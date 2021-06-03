@@ -175,7 +175,7 @@ window.addEventListener('click', function(e) {
 	document.body.appendChild(img);
 		console.log('a tree!');
 	}
-	else if(specLandform === 'mtn') {
+	if(specLandform === 'mtn') {
 	var img = document.createElement("img");
 	//img.src = 'Visuals/Mountains1.jpg';
 	img.src = mtnArray[parseInt(specNum)].src;
