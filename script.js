@@ -182,7 +182,7 @@ function verySpecific(landform, num) {
 	dragElement(img);
 	document.getElementById('myCanvas').appendChild(img);
 	*/
-}
+
 
 window.addEventListener('click', function(e) {
 
