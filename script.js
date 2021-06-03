@@ -172,7 +172,7 @@ window.addEventListener('click', function(e) {
 	img.style.position = 'absolute';
 
 	dragElement(img);
-	document.getElementById('myCanvas').appendChild(img);
+	document.body.appendChild(img);
 		console.log('a tree!');
 	}
 	else if(specLandform === 'mtn') {
@@ -190,7 +190,7 @@ window.addEventListener('click', function(e) {
 	img.style.position = 'absolute';
 
 	dragElement(img);
-	document.getElementById('myCanvas').appendChild(img);
+	document.body.appendChild(img);
 	console.log('a mountain!');
 	}
 });
