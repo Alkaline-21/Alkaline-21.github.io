@@ -8,6 +8,9 @@ let treeClick = false;
 var mtnArray = [];
 let number = -1;
 
+var specNum;
+var specLandform;
+
 mtnArray[0] = new Image();
 mtnArray[0].src = 'Visuals/Mountains1.jpg';
 
@@ -46,14 +49,20 @@ function selector(category) {
 	if (category === 'mountain') {
 		mtnClick = true;
 		treeClick = false;
+		specLandform = 'none';
+		specNum = -1;
 	}
 	else if (category === 'arrow') {
 		mtnClick = false;
 		treeClick = false;
+		specLandform = 'none';
+		specNum = -1;
 	}
 	else if (category === 'tree') {
 		treeClick = true;
 		mtnClick = false;
+		specLandform = 'none';
+		specNum = -1;
 	}
 }
 /*		
@@ -141,25 +150,30 @@ function getY(canvas, event) {
 }
 
 function verySpecific(landform, num) {
-	
-	if(landform === 'tree') {
-	var img = document.createElement("img");
-	//img.src = 'Visuals/Mountains1.jpg';
-	img.src = treeArray[parseInt(num)].src;
-	img.width = 22.5;
-	img.alt = 'a tree';
-
-	var canvas = document.getElementById('myCanvas');
-	var x = getX(canvas, event);
-	var y = getY(canvas, event);
-	img.style.marginLeft = x;
-	img.style.marginTop = y;
-	img.style.position = 'absolute';
-
-	dragElement(img);
-	document.getElementById('myCanvas').appendChild(img);
-	}
+	specLandform = landform;
+	specNum = num;
 }
+
+window.addEventListener('click', function(e) {
+
+		if(specLandform === 'tree') {
+		var img = document.createElement("img");
+		//img.src = 'Visuals/Mountains1.jpg';
+		img.src = treeArray[parseInt(num)].src;
+		img.width = 22.5;
+		img.alt = 'a tree';
+
+		var canvas = document.getElementById('myCanvas');
+		var x = getX(canvas, event);
+		var y = getY(canvas, event);
+		img.style.marginLeft = x;
+		img.style.marginTop = y;
+		img.style.position = 'absolute';
+
+		dragElement(img);
+		document.getElementById('myCanvas').appendChild(img);
+	}
+});
 	/*
 	var img = document.createElement("img");
 	if(landform === 'tree') {
