@@ -179,7 +179,8 @@ window.addEventListener('click', function(e) {
 	var img = document.createElement("img");
 	//img.src = 'Visuals/Mountains1.jpg';
 	img.src = mtnArray[parseInt(specNum)].src;
-	img.width = 22.5;
+	img.width = 75;
+	img.height = 50;
 	img.alt = 'a mountain';
 
 	var canvas = document.getElementById('myCanvas');
