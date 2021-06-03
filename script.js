@@ -159,7 +159,7 @@ window.addEventListener('click', function(e) {
 		if(specLandform === 'tree') {
 		var img = document.createElement("img");
 		//img.src = 'Visuals/Mountains1.jpg';
-		img.src = treeArray[parseInt(num)].src;
+		img.src = treeArray[parseInt(specNum)].src;
 		img.width = 22.5;
 		img.alt = 'a tree';
 
