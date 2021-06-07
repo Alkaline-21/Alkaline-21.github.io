@@ -299,6 +299,18 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+var canvas = document.getElementById('myCanvas'),
+context = canvas.getContext('2d');
+
+window.onload = function make_base()
+{
+	var canvas = document.getElementById('myCanvas'), context = canvas.getContext('2d');
+	base_image = new Image();
+	base_image.src = 'Visuals/Parchment Texture.jpg';
+	context.drawImage(base_image, 0, 0, canvas.width, canvas.height);
+}
+
 /*
 let isDrawing = false;
 
