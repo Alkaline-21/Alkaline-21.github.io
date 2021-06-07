@@ -170,7 +170,7 @@ window.addEventListener('click', function(e) {
 	img.style.marginLeft = x;
 	img.style.marginTop = y;
 	img.style.position = 'absolute';
-	img.style.mix-blend-mode = multiply;
+	img.style.mix-blend-mode = 'multiply';
 
 	dragElement(img);
 	document.body.appendChild(img);
@@ -190,7 +190,7 @@ window.addEventListener('click', function(e) {
 	img.style.marginLeft = x;
 	img.style.marginTop = y;
 	img.style.position = 'absolute';
-	img.style.mix-blend-mode = multiply;
+	img.style.mix-blend-mode = 'multiply';
 
 	dragElement(img);
 	document.body.appendChild(img);
@@ -243,7 +243,7 @@ window.addEventListener('click', function(e) {
 			img.style.marginLeft = x;
 			img.style.marginTop = y;
 			img.style.position = 'absolute';
-			img.style.mix-blend-mode = multiply;
+			img.style.mix-blend-mode = 'multiply';
 
 			dragElement(img);
 			document.body.appendChild(img);
@@ -261,7 +261,7 @@ window.addEventListener('click', function(e) {
 			img.style.marginLeft = x;
 			img.style.marginTop = y;
 			img.style.position = 'absolute';
-			img.style.mix-blend-mode = multiply;
+			img.style.mix-blend-mode = 'multiply';
 
 			dragElement(img);
 			document.body.appendChild(img);
