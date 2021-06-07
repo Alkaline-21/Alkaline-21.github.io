@@ -1,7 +1,7 @@
 .fancy-titles {
   font-family: 'Uncial Antiqua', cursive;
   text-align: center;
-  color: #4b6794;
+  color: #FFFFFF;
   position: relative;
   z-index: 3;
 }
@@ -10,7 +10,6 @@
   font-size: 50 px;
   text-align: center;
   position: relative;
-  color: #FFFFFF
 }
 
 #landforms-title {
