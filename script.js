@@ -44,6 +44,8 @@ treeArray[5] = new Image();
 treeArray[5].src = 'Visuals/Tree6.jpg';
 
 var clrMountain;
+let drawLand = false;
+let drawOcean = false;
 
 function selector(category) {
 	if (category === 'mountain') {
@@ -63,6 +65,14 @@ function selector(category) {
 		mtnClick = false;
 		specLandform = 'none';
 		specNum = -1;
+	}
+	else if(category === 'drawOcean') {
+		drawOcean = true;
+		drawLand = false;
+	}
+	else if(category === 'drawLand') {
+		drawOcean = false;
+		drawLand = true;
 	}
 }
 /*		
@@ -307,24 +317,17 @@ function dragElement(elmnt) {
 var canvas = document.getElementById('myCanvas'),
 context = canvas.getContext('2d');
 
-window.onload = function make_base()
-{
-	var canvas = document.getElementById('myCanvas'), context = canvas.getContext('2d');
-	base_image = new Image();
-	base_image.src = 'Visuals/Parchment Texture.jpg';
-	context.drawImage(base_image, 0, 0, canvas.width, canvas.height);
-}
-
-/*
 let isDrawing = false;
 
 window.onload = () => {
 	const canvas = document.getElementById('myCanvas');
 	const context = canvas.getContext('2d');
 	
-	canvas.addEventListener('mousedown', startDrawing);
-	canvas.addEventListener('mouseup', stopDrawing);
-	canvas.addEventListener('mousemove', (event) => draw(event, context));
+	if(drawLand || drawOcean) {
+		canvas.addEventListener('mousedown', startDrawing);
+		canvas.addEventListener('mouseup', stopDrawing);
+		canvas.addEventListener('mousemove', (event) => draw(event, context));
+	}
 
 };
 
@@ -337,9 +340,9 @@ function stopDrawing() {
 }
 
 function draw(event, context) {
-	if(isDrawing) {
+	if(isDrawing && drawOcean) {
 	context.fillRect(event.pageX, event.pageY, 2, 2);
 	}
 	//https://wanago.io/2019/06/24/creating-a-simple-drawing-app-using-canvas-saving-and-loading-images/
 }
-*/
+
