@@ -318,10 +318,6 @@ function dragElement(elmnt) {
   }
 }
 
-window.onload = () => {
-  const canvas = document.getElementById('myCanvas');
-};
-
 window.addEventListener('click', function(e) {
 	var isDrawing = false;
 
