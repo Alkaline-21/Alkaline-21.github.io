@@ -102,20 +102,18 @@ function stopDrawing() {
 isDrawing = false;
 }
 function draw(event) {
-	console.log('drawing ish...');
-	if (isDrawing) {
-		console.log('draw ocean ' + window.drawOcean);
-		console.log('draw land ' + window.drawLand);
-		if (window.drawOcean) {
-			context.fillStyle = 'lightBlue';
-			context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
-			console.log('draw water!');
-		}
-		else if (window.drawLand) {
-			context.fillStyle = 'tan';
-			context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
-			console.log('draw land!');
-		}
+	//console.log('drawing ish...');
+	console.log('draw ocean ' + window.drawOcean);
+	console.log('draw land ' + window.drawLand);
+	if (window.drawOcean) {
+		context.fillStyle = 'lightBlue';
+		context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
+		console.log('draw water!');
+	}
+	else if (window.drawLand) {
+		context.fillStyle = 'tan';
+		context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
+		console.log('draw land!');
 	}
 }
 /*		
