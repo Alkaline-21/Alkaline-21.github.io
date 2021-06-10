@@ -343,7 +343,7 @@ class Drawing {
     this.isDrawing = false;
   }
   draw(event) {
-	if (this.isDrawing) {
+	//if (this.isDrawing) {
 		console.log('drawing true');
 		if (window.drawOcean) {
 		this.context.fillStyle = 'lightBlue';
@@ -355,7 +355,7 @@ class Drawing {
 		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
 		console.log('draw land!');
 		}
-	}
-	  console.log('drawing false');
+	//}
+	  console.log('drawing...');
   }
 }
