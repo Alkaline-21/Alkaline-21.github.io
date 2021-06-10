@@ -323,46 +323,49 @@ window.onload = () => {
   new Drawing(canvas);
 };
 
-class Drawing {
-  constructor(canvas) {
-    this.isDrawing = false;
-	  console.log("entered drawing!");
+window.addEventListener('click', function(e) {
 
-    canvas.addEventListener('mousedown', () => this.startDrawing());
-    canvas.addEventListener('mousemove', (event) => this.draw(event));
-    canvas.addEventListener('mouseup', () => this.stopDrawing());
+	class Drawing {
+		constructor(canvas) {
+		this.isDrawing = false;
+		  console.log("entered drawing!");
 
-    const rect = canvas.getBoundingClientRect();
+		canvas.addEventListener('mousedown', () => this.startDrawing());
+		canvas.addEventListener('mousemove', (event) => this.draw(event));
+		canvas.addEventListener('mouseup', () => this.stopDrawing());
 
-    this.offsetLeft = rect.left;
-    this.offsetTop = rect.top;
+		const rect = canvas.getBoundingClientRect();
 
-    this.canvas = canvas;
-    this.context = this.canvas.getContext('2d');
-  }
-  startDrawing() {
-    this.isDrawing = true;
-  }
-  stopDrawing() {
-    this.isDrawing = false;
-  }
-  draw(event) {
-	//if (this.isDrawing) {
-	  console.log('draw ' + window.drawOcean);
-	  console.log('draw ' + window.drawLand);
-	  console.log('draw2 ' + drawOcean);
-	  console.log('draw2 ' + drawOcean);
-		if (window.drawOcean) {
-		this.context.fillStyle = 'lightBlue';
-		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
-		console.log('draw water!');
+		this.offsetLeft = rect.left;
+		this.offsetTop = rect.top;
+
+		this.canvas = canvas;
+		this.context = this.canvas.getContext('2d');
 		}
-		else if (window.drawLand) {
-		this.context.fillStyle = 'tan';
-		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
-		console.log('draw land!');
+		startDrawing() {
+		this.isDrawing = true;
 		}
-	//}
-	  console.log('drawing...');
-  }
-}
+		stopDrawing() {
+		this.isDrawing = false;
+		}
+		draw(event) {
+		//if (this.isDrawing) {
+		  console.log('draw ' + window.drawOcean);
+		  console.log('draw ' + window.drawLand);
+		  console.log('draw2 ' + drawOcean);
+		  console.log('draw2 ' + drawOcean);
+			if (window.drawOcean) {
+			this.context.fillStyle = 'lightBlue';
+			this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
+			console.log('draw water!');
+			}
+			else if (window.drawLand) {
+			this.context.fillStyle = 'tan';
+			this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
+			console.log('draw land!');
+			}
+		//}
+		  console.log('drawing...');
+		}
+	}
+});
