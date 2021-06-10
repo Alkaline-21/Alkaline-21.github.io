@@ -73,6 +73,10 @@ function selector(category) {
 	else if(category === 'drawLand') {
 		window.drawOcean = false;
 		window.drawLand = true;
+		
+		console.log('in selector: ' + drawLand);
+		console.log('in selector: ' + window.drawLand);
+
 	}
 }
 /*		
@@ -344,7 +348,10 @@ class Drawing {
   }
   draw(event) {
 	//if (this.isDrawing) {
-		console.log('drawing true');
+	  console.log('draw ' + window.drawOcean);
+	  console.log('draw ' + window.drawLand);
+	  console.log('draw2 ' + drawOcean);
+	  console.log('draw2 ' + drawOcean);
 		if (window.drawOcean) {
 		this.context.fillStyle = 'lightBlue';
 		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
