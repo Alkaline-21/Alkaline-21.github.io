@@ -314,11 +314,6 @@ function dragElement(elmnt) {
   }
 }
 
-var canvas = document.getElementById('myCanvas'),
-context = canvas.getContext('2d');
-
-let isDrawing = false;
-
 window.onload = () => {
   const canvas = document.getElementById('myCanvas');
   new Drawing(canvas);
@@ -350,11 +345,13 @@ class Drawing {
 	if (this.isDrawing) {
 		if (drawOcean) {
 		this.context.fillStyle = 'lightBlue';
-		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 2, 2);
+		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
+		console.log('draw water!');
 		}
 		else if (drawLand) {
 		this.context.fillStyle = 'tan';
-		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 2, 2);
+		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
+		console.log('draw land!');
 		}
 	}
   }
