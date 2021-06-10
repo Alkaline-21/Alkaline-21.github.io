@@ -44,8 +44,8 @@ treeArray[5] = new Image();
 treeArray[5].src = 'Visuals/Tree6.jpg';
 
 var clrMountain;
-let drawLand = false;
-let drawOcean = false;
+window.drawLand = false;
+window.drawOcean = false;
 
 function selector(category) {
 	if (category === 'mountain') {
@@ -67,12 +67,12 @@ function selector(category) {
 		specNum = -1;
 	}
 	else if(category === 'drawOcean') {
-		drawOcean = true;
-		drawLand = false;
+		window.drawOcean = true;
+		window.drawLand = false;
 	}
 	else if(category === 'drawLand') {
-		drawOcean = false;
-		drawLand = true;
+		window.drawOcean = false;
+		window.drawLand = true;
 	}
 }
 /*		
@@ -344,16 +344,18 @@ class Drawing {
   }
   draw(event) {
 	if (this.isDrawing) {
-		if (drawOcean) {
+		console.log('drawing true');
+		if (window.drawOcean) {
 		this.context.fillStyle = 'lightBlue';
 		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
 		console.log('draw water!');
 		}
-		else if (drawLand) {
+		else if (window.drawLand) {
 		this.context.fillStyle = 'tan';
 		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
 		console.log('draw land!');
 		}
 	}
+	  console.log('drawing false');
   }
 }
