@@ -323,8 +323,6 @@ window.onload = () => {
 };
 
 window.addEventListener('click', function(e) {
-	
-	new Drawing(canvas);
 
 	class Drawing {
 		constructor(canvas) {
@@ -369,4 +367,5 @@ window.addEventListener('click', function(e) {
 		  console.log('drawing...');
 		}
 	}
+	new Drawing(canvas);
 });
