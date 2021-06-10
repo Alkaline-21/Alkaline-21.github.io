@@ -320,11 +320,6 @@ function dragElement(elmnt) {
 
 window.addEventListener('click', function(e) {
 	var isDrawing = false;
-
-	canvas.addEventListener('mousedown', () => startDrawing());
-	canvas.addEventListener('mousemove', (event) => draw(event));
-	canvas.addEventListener('mouseup', () => stopDrawing());
-
 	var rect = canvas.getBoundingClientRect();
 
 	var offsetLeft = rect.left;
@@ -332,6 +327,10 @@ window.addEventListener('click', function(e) {
 
 	var canvas = document.getElementById("myCanvas");
 	var context = canvas.getContext('2d');
+	canvas.addEventListener('mousedown', () => startDrawing());
+	canvas.addEventListener('mousemove', (event) => draw(event));
+	canvas.addEventListener('mouseup', () => stopDrawing());
+
 	
 	function startDrawing() {
 	isDrawing = true;
