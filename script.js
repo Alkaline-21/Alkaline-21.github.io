@@ -82,7 +82,6 @@ function selector(category) {
 
 
 var canvas = document.getElementById("myCanvas");
-var context = canvas.getContext('2d');
 var isDrawing = false;
 var rect = canvas.getBoundingClientRect();
 
@@ -103,6 +102,7 @@ isDrawing = false;
 }
 function draw(event) {
 	//console.log('drawing ish...');
+	var context = canvas.getContext('2d');
 	console.log('draw ocean ' + window.drawOcean);
 	console.log('draw land ' + window.drawLand);
 	if (window.drawOcean) {
