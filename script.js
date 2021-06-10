@@ -320,29 +320,40 @@ context = canvas.getContext('2d');
 let isDrawing = false;
 
 window.onload = () => {
-	const canvas = document.getElementById('myCanvas');
-	const context = canvas.getContext('2d');
-	
-	if(drawLand || drawOcean) {
-		canvas.addEventListener('mousedown', startDrawing);
-		canvas.addEventListener('mouseup', stopDrawing);
-		canvas.addEventListener('mousemove', (event) => draw(event, context));
-	}
-
+  const canvas = document.getElementById('myCanvas');
+  new Drawing(canvas);
 };
 
-function startDrawing() {
-	isDrawing = true;
-}
+class Drawing {
+  constructor(canvas, saveButton, loadInput) {
+    this.isDrawing = false;
 
-function stopDrawing() {
-	isDrawing = false;
-}
+    canvas.addEventListener('mousedown', () => this.startDrawing());
+    canvas.addEventListener('mousemove', (event) => this.draw(event));
+    canvas.addEventListener('mouseup', () => this.stopDrawing());
 
-function draw(event, context) {
-	if(isDrawing && drawOcean) {
-	context.fillRect(event.pageX, event.pageY, 2, 2);
+    const rect = canvas.getBoundingClientRect();
+
+    this.offsetLeft = rect.left;
+    this.offsetTop = rect.top;
+
+    this.canvas = canvas;
+    this.context = this.canvas.getContext('2d');
+  }
+  startDrawing() {
+    this.isDrawing = true;
+  }
+  stopDrawing() {
+    this.isDrawing = false;
+  }
+  draw(event) {
+	if (this.isDrawing && drawOcean) {
+		this.context.fillStyle = 'lightBlue';
+		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 2, 2);
 	}
-	//https://wanago.io/2019/06/24/creating-a-simple-drawing-app-using-canvas-saving-and-loading-images/
+	else if (this.isDrawing && drawLand) {
+		this.context.fillStyle = 'tan';
+		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 2, 2);
+	}
+  }
 }
-
