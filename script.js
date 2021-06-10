@@ -320,10 +320,11 @@ function dragElement(elmnt) {
 
 window.onload = () => {
   const canvas = document.getElementById('myCanvas');
-  new Drawing(canvas);
 };
 
 window.addEventListener('click', function(e) {
+	
+	new Drawing(canvas);
 
 	class Drawing {
 		constructor(canvas) {
