@@ -332,7 +332,7 @@ window.addEventListener('click', function(e) {
 
 	const canvas = document.getElementById('myCanvas');
 	const context = canvas.getContext('2d');
-	}
+	
 	startDrawing() {
 	isDrawing = true;
 	}
@@ -340,22 +340,22 @@ window.addEventListener('click', function(e) {
 	isDrawing = false;
 	}
 	draw(event) {
-	if (isDrawing) {
-	  console.log('draw ' + window.drawOcean);
-	  console.log('draw ' + window.drawLand);
-	  console.log('draw2 ' + drawOcean);
-	  console.log('draw2 ' + drawOcean);
-		if (window.drawOcean) {
-		context.fillStyle = 'lightBlue';
-		context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
-		console.log('draw water!');
+		console.log('drawing ish...');
+		if (isDrawing) {
+			console.log('draw ' + window.drawOcean);
+			console.log('draw ' + window.drawLand);
+			console.log('draw2 ' + drawOcean);
+			console.log('draw2 ' + drawOcean);
+			if (window.drawOcean) {
+				context.fillStyle = 'lightBlue';
+				context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
+				console.log('draw water!');
+			}
+			else if (window.drawLand) {
+				context.fillStyle = 'tan';
+				context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
+				console.log('draw land!');
+			}
 		}
-		else if (window.drawLand) {
-		context.fillStyle = 'tan';
-		context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
-		console.log('draw land!');
-		}
-	}
-	  console.log('drawing...');
 	}
 });
