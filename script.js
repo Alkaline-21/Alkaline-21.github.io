@@ -347,13 +347,15 @@ class Drawing {
     this.isDrawing = false;
   }
   draw(event) {
-	if (this.isDrawing && drawOcean) {
+	if (this.isDrawing) {
+		if (drawOcean) {
 		this.context.fillStyle = 'lightBlue';
 		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 2, 2);
-	}
-	else if (this.isDrawing && drawLand) {
+		}
+		else if (drawLand) {
 		this.context.fillStyle = 'tan';
 		this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 2, 2);
+		}
 	}
   }
 }
