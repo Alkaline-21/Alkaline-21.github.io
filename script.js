@@ -323,49 +323,43 @@ window.onload = () => {
 };
 
 window.addEventListener('click', function(e) {
+	var isDrawing = false;
 
-	class Drawing {
-		constructor(canvas) {
-		this.isDrawing = false;
-		  console.log("entered drawing!");
+	canvas.addEventListener('mousedown', () => startDrawing());
+	canvas.addEventListener('mousemove', (event) => draw(event));
+	canvas.addEventListener('mouseup', () => stopDrawing());
 
-		canvas.addEventListener('mousedown', () => this.startDrawing());
-		canvas.addEventListener('mousemove', (event) => this.draw(event));
-		canvas.addEventListener('mouseup', () => this.stopDrawing());
+	const rect = canvas.getBoundingClientRect();
 
-		const rect = canvas.getBoundingClientRect();
+	const offsetLeft = rect.left;
+	const offsetTop = rect.top;
 
-		this.offsetLeft = rect.left;
-		this.offsetTop = rect.top;
-
-		this.canvas = canvas;
-		this.context = this.canvas.getContext('2d');
+	const canvas = document.getElementById('myCanvas');
+	const context = canvas.getContext('2d');
+	}
+	startDrawing() {
+	isDrawing = true;
+	}
+	stopDrawing() {
+	isDrawing = false;
+	}
+	draw(event) {
+	if (isDrawing) {
+	  console.log('draw ' + window.drawOcean);
+	  console.log('draw ' + window.drawLand);
+	  console.log('draw2 ' + drawOcean);
+	  console.log('draw2 ' + drawOcean);
+		if (window.drawOcean) {
+		context.fillStyle = 'lightBlue';
+		context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
+		console.log('draw water!');
 		}
-		startDrawing() {
-		this.isDrawing = true;
-		}
-		stopDrawing() {
-		this.isDrawing = false;
-		}
-		draw(event) {
-		//if (this.isDrawing) {
-		  console.log('draw ' + window.drawOcean);
-		  console.log('draw ' + window.drawLand);
-		  console.log('draw2 ' + drawOcean);
-		  console.log('draw2 ' + drawOcean);
-			if (window.drawOcean) {
-			this.context.fillStyle = 'lightBlue';
-			this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
-			console.log('draw water!');
-			}
-			else if (window.drawLand) {
-			this.context.fillStyle = 'tan';
-			this.context.fillRect(event.pageX - this.offsetLeft, event.pageY - this.offsetTop, 10, 10);
-			console.log('draw land!');
-			}
-		//}
-		  console.log('drawing...');
+		else if (window.drawLand) {
+		context.fillStyle = 'tan';
+		context.fillRect(event.pageX - offsetLeft, event.pageY - offsetTop, 10, 10);
+		console.log('draw land!');
 		}
 	}
-	new Drawing(canvas);
+	  console.log('drawing...');
+	}
 });
