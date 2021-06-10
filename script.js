@@ -325,13 +325,13 @@ window.addEventListener('click', function(e) {
 	canvas.addEventListener('mousemove', (event) => draw(event));
 	canvas.addEventListener('mouseup', () => stopDrawing());
 
-	const rect = canvas.getBoundingClientRect();
+	var rect = canvas.getBoundingClientRect();
 
-	const offsetLeft = rect.left;
-	const offsetTop = rect.top;
+	var offsetLeft = rect.left;
+	var offsetTop = rect.top;
 
-	const canvas = document.getElementById('myCanvas');
-	const context = canvas.getContext('2d');
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext('2d');
 	
 	function startDrawing() {
 	isDrawing = true;
