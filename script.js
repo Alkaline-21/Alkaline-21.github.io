@@ -66,11 +66,11 @@ function selector(category) {
 		specLandform = 'none';
 		specNum = -1;
 	}
-	else if(category === 'drawOcean') {
+	else if(category === 'ocean') {
 		window.drawOcean = true;
 		window.drawLand = false;
 	}
-	else if(category === 'drawLand') {
+	else if(category === 'land') {
 		window.drawOcean = false;
 		window.drawLand = true;
 		
