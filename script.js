@@ -333,13 +333,13 @@ window.addEventListener('click', function(e) {
 	const canvas = document.getElementById('myCanvas');
 	const context = canvas.getContext('2d');
 	
-	startDrawing() {
+	function startDrawing() {
 	isDrawing = true;
 	}
-	stopDrawing() {
+	function stopDrawing() {
 	isDrawing = false;
 	}
-	draw(event) {
+	function draw(event) {
 		console.log('drawing ish...');
 		if (isDrawing) {
 			console.log('draw ' + window.drawOcean);
