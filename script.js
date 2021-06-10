@@ -320,8 +320,9 @@ window.onload = () => {
 };
 
 class Drawing {
-  constructor(canvas, saveButton, loadInput) {
+  constructor(canvas) {
     this.isDrawing = false;
+	  console.log("entered drawing!");
 
     canvas.addEventListener('mousedown', () => this.startDrawing());
     canvas.addEventListener('mousemove', (event) => this.draw(event));
